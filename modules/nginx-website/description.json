@@ -1,0 +1,38 @@
+{
+  "module": "nginx-website",
+  "dependencies": ["nginx"],
+  "version": "1.0",
+  "scripts": [
+    {
+      "file": "install.sh",
+      "aliases": ["install"],
+      "isInstallScript": true,
+      "isRecursive": true,
+      "params": ["domain", "target", "django-module-name", "uwsgi-processes:10", "uwsgi-threads:3", 
+                 "uwsgi-buffer-thread:65535", "uwsgi-socket-queue-size:2048"],
+      "dependencies": ["nginx-version"]
+    },
+    {
+      "file": "purge.sh",
+      "aliases": ["purge, uninstall"],
+      "params": ["domain"],
+      "dependencies": ["nginx-website-version"]
+    },
+    {
+      "file": "update.sh",
+      "aliases": ["update"],
+      "isRecursive": true,
+      "dependencies": ["nginx-website-version"]
+    },
+    {
+      "file": "start.sh",
+      "aliases": ["start"],
+      "dependencies": ["nginx-website-version"]
+    },
+    {
+      "file": "stop.sh",
+      "aliases": ["stop"],
+      "dependencies": ["nginx-website-version"]
+    }
+  ]
+}

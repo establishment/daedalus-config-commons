@@ -1,0 +1,34 @@
+{
+  "module": "redis",
+  "dependencies": ["core"],
+  "version": "1.0",
+  "scripts": [
+    {
+      "file": "install.sh",
+      "aliases": ["install"],
+      "isInstallScript": true,
+      "isRecursive": true,
+      "params": ["redis-type"],
+      "dependencies": ["core-version"]
+    },
+    {
+      "file": "start.sh",
+      "aliases": ["start"],
+      "dependencies": ["redis-version"],
+      "priority": "first"
+    },
+    {
+      "file": "stop.sh",
+      "aliases": ["stop"],
+      "dependencies": ["redis-version"],
+      "priority": "last"
+    },
+    {
+      "file": "update.sh",
+      "aliases": ["install"],
+      "isRecursive": true,
+      "dependencies": ["redis-version"],
+      "priority": "first"
+    }
+  ]
+}

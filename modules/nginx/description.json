@@ -1,0 +1,20 @@
+{
+  "module": "nginx",
+  "dependencies": ["core"],
+  "version": "1.0",
+  "scripts": [
+    {
+      "file": "install.sh",
+      "aliases": ["install"],
+      "isInstallScript": true,
+      "isRecursive": true,
+      "dependencies": ["core-version"]
+    },
+    {
+      "file": "update.sh",
+      "aliases": ["update"],
+      "isRecursive": true,
+      "dependencies": ["nginx-version"]
+    }
+  ]
+}

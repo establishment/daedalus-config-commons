@@ -1,0 +1,23 @@
+{
+  "module": "core",
+  "version": "1.0",
+  "scripts": [
+    {
+      "file": "install.sh",
+      "aliases": ["install"],
+      "isInstallScript": true,
+      "params": ["hostname", "git-username", "git-email"]
+    },
+    {
+      "file": "purge.sh",
+      "aliases": ["purge", "uninstall"],
+      "dependencies": ["core-version"]
+    },
+    {
+      "file": "update.sh",
+      "aliases": ["update"],
+      "params": ["branch"],
+      "dependencies": ["core-version"]
+    }
+  ]
+}

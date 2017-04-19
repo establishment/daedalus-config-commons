@@ -1,0 +1,25 @@
+upstream {{ DOMAIN }}_django {
+    server unix://{{ DAEDALUS_PROJECT_PATH }}/{{ DOMAIN }}.sock;
+}
+
+server {
+    listen 80;
+
+    server_name {{ DOMAIN }} www.{{ DOMAIN }};
+
+    location /media  {
+        alias {{ DAEDALUS_PROJECT_PATH }}/media;
+    }
+
+    location /static {
+        access_log off;
+        alias {{ DAEDALUS_PROJECT_PATH }}/static;
+    }
+
+    include "/etc/nginx/sites-extensions/{{ DOMAIN }}-extension";
+
+    location / {
+        uwsgi_pass  {{ DOMAIN }}_django;
+        include     {{ DAEDALUS_STATE_MODULE_PATH }}/uwsgi_params;
+    }
+}

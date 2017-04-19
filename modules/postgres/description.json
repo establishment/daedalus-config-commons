@@ -1,0 +1,44 @@
+{
+  "module": "postgres",
+  "version": "1.0",
+  "dependencies": ["core"],
+  "scripts": [
+    {
+      "file": "install.sh",
+      "aliases": ["install"],
+      "isInstallScript": true,
+      "isRecursive": true,
+      "params": ["postgres-type", "postgres-user-password", "postgres-password"],
+      "dependencies": ["core-version"]
+    },
+    {
+      "file": "update.sh",
+      "aliases": ["update"],
+      "isRecursive": true,
+      "dependencies": ["postgres-version"],
+      "priority": "first"
+    },
+    {
+      "file": "start.sh",
+      "aliases": ["start"],
+      "dependencies": ["postgres-version"],
+      "priority": "first"
+    },
+    {
+      "file": "stop.sh",
+      "aliases": ["stop"],
+      "dependencies": ["postgres-version"],
+      "priority": "last"
+    },
+    {
+      "file": "load_db.sh",
+      "aliases": ["load-db", "loaddb", "db-load", "dbload", "load"],
+      "dependencies": ["postgres-version"]
+    },
+    {
+      "file": "save_db.sh",
+      "aliases": ["save-db", "savedb", "db-save", "dbsave", "save"],
+      "dependencies": ["postgres-version"]
+    }
+  ]
+}

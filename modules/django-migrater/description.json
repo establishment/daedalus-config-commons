@@ -1,0 +1,25 @@
+{
+  "module": "django-migrater",
+  "dependencies": ["django-core"],
+  "version": "1.0",
+  "scripts": [
+    {
+      "file": "install.sh",
+      "aliases": ["install"],
+      "isInstallScript": true,
+      "isRecursive": true,
+      "dependencies": ["django-core-version"]
+    },
+    {
+      "file": "update.sh",
+      "aliases": ["update"],
+      "isRecursive": true,
+      "dependencies": ["django-migrater-version"]
+    },
+    {
+      "file": "migrate.sh",
+      "aliases": ["migrate"],
+      "dependencies": ["django-migrater-version"]
+    }
+  ]
+}
