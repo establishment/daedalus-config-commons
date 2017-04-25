@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-daedalus restart "${DAEDALUS_MODULE_NAME}\#${DAEDALUS_MODULE_NAMESPACE}"
+daedalus restart "${DAEDALUS_FULL_MODULE_NAME}"

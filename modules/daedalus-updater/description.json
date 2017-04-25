@@ -1,0 +1,16 @@
+{
+    "module": "daedalus-updater",
+    "version": "1.0",
+    "scripts": [
+        {
+            "file": "install.sh",
+            "aliases": ["install"],
+            "isInstallScript": true
+        },
+        {
+            "file", "update.sh",
+            "aliases": ["update"],
+            "dependencies": ["daedalus-updater-version"]
+        }
+    ]
+}

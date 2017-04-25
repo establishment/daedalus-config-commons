@@ -17,24 +17,31 @@ LINODE_API_SECRET_KEY = "{{ LINODE_API_KEY }}"
 
 ALLOWED_HOSTS = ["localhost", "{{ DOMAIN }}", "www." + "{{ DOMAIN }}"]
 
+MOCK_MACHINE_ID = {{ MOCK_MACHINE_ID }}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'infra.org',
-        'USER': 'postgres',
-        'PASSWORD': '{{ POSTGRES_PASSWORD }}',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "{{ DJANGO_APP_DATABASE_NAME }}",
+        "USER": "postgres",
+        "PASSWORD": "{{ POSTGRES_PASSWORD }}",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
 ACCOUNTS_EMAIL_HOST = "{{ ACCOUNTS_EMAIL_HOST }}"
 ACCOUNTS_EMAIL_PORT = {{ ACCOUNTS_EMAIL_PORT }}
-ACCOUNTS_EMAIL_USER = "contact@infra.org"
-ACCOUNTS_EMAIL_PASSWORD = {"{{ ACCOUNTS_EMAIL_PASSWORD }}"}
-ACCOUNTS_EMAIL_TLS = {"{{ ACCOUNTS_EMAIL_USE_TLS }}"}
+ACCOUNTS_EMAIL_USER = "{{ ACCOUNTS_EMAIL_USER }}"
+ACCOUNTS_EMAIL_PASSWORD = "{{ ACCOUNTS_EMAIL_PASSWORD }}"
+ACCOUNTS_EMAIL_TLS = "{{ ACCOUNTS_EMAIL_USE_TLS }}"
 
-RECAPTCHA_PRIVATE_KEY = {"{{ RECAPTCHA_PRIVATE_KEY }}"}
+RECAPTCHA_PRIVATE_KEY = "{{ RECAPTCHA_PRIVATE_KEY }}"
 
-ENABLE_LIVE_WEBSOCKETS = True
-FORCE_LIVE = True
+CUSTOM_MIDDLEWARE = (
+    {{ CUSTOM_MIDDLEWARE }}
+)
+
+FORCE_LIVE = {{ FORCE_LIVE }}
+ENABLE_LIVE_WEBSOCKETS = {{ ENABLE_LIVE_WEBSOCKETS }}
+

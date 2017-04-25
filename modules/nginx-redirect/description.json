@@ -1,0 +1,19 @@
+{
+    "module": "nginx-redirect",
+    "dependencies": ["nginx"],
+    "version": "1.0",
+    "scripts": [
+        {
+            "file": "install.sh",
+            "aliases": ["install"],
+            "isInstallScript": true,
+            "params": ["domain", "port:80"]
+        },
+        {
+            "file": "purge.sh",
+            "aliases": ["purge", "uninstall"],
+            "params": ["port", "domain"],
+            "dependencies": ["nginx-website-version"]
+        }
+    ]
+}

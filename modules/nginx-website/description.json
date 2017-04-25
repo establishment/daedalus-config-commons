@@ -8,7 +8,7 @@
       "aliases": ["install"],
       "isInstallScript": true,
       "isRecursive": true,
-      "params": ["domain", "target", "django-module-name", "uwsgi-processes:10", "uwsgi-threads:3", 
+      "params": ["domain", "target", "django-app", "port:80" ,"uwsgi-processes:10", "uwsgi-threads:3", 
                  "uwsgi-buffer-thread:65535", "uwsgi-socket-queue-size:2048"],
       "dependencies": ["nginx-version"]
     },

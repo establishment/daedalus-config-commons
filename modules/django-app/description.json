@@ -7,24 +7,24 @@
       "file": "install.sh",
       "aliases": ["install"],
       "isInstallScript": true,
-      "params": ["domain", "target", "django-app", "postgres-password", "linode-api-token:NOT_USED", "django-email-server",
+      "params": ["domain", "target", "django-app", "django-app-database-name", "postgres-password", "linode-api-token:NOT_USED", "django-email-server",
                  "django-email-use-tls:True", "django-email-host", "django-email-port:587", "django-email-host-user",
-                 "django-email-host-password", "django-email-default-from-email", "recaptcha-private-key:NOT_USED",
+                 "django-email-host-password", "django-email-default-from-email", "recaptcha-private-key:NOT_USED", "mock-machine-id:-1",
                  "django-accounts-email-host", "django-accounts-email-port:587", "django-accounts-email-user",
-                 "django-accounts-email-tls:True", "django-accounts-email-password"],
+                 "django-accounts-email-tls:True", "django-accounts-email-password", "custom-middleware:", "force-live:True", "enable-live-websockets:True"],
       "dependencies": ["django-core-version"]
     },
     {
       "file": "update.sh",
       "aliases": ["update"],
       "isRecursive": true,
-      "dependencies": ["infra-node-version"]
+      "dependencies": ["django-app-version"]
     },
     {
       "file": "purge.sh",
       "aliases": ["purge", "uninstall"],
       "params": ["django-app"],
-      "dependencies": ["infra-node-version"]
+      "dependencies": ["django-app-version"]
     }
   ]
 }
