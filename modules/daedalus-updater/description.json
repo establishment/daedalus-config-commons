@@ -8,7 +8,7 @@
             "isInstallScript": true
         },
         {
-            "file", "update.sh",
+            "file": "update.sh",
             "aliases": ["update"],
             "dependencies": ["daedalus-updater-version"]
         }
