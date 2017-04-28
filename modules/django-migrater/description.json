@@ -2,6 +2,7 @@
   "module": "django-migrater",
   "dependencies": ["django-core"],
   "version": "1.0",
+  "isSingleton": true,
   "scripts": [
     {
       "file": "install.sh",

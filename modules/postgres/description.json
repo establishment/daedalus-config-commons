@@ -2,6 +2,7 @@
   "module": "postgres",
   "version": "1.0",
   "dependencies": ["core"],
+  "isSingleton": true,
   "scripts": [
     {
       "file": "install.sh",

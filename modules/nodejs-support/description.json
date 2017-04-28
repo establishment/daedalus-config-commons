@@ -1,14 +1,15 @@
 {
-  "module": "nodejs-support",
-  "dependencies": ["core"],
-  "version": "1.0",
-  "scripts": [
-    {
-      "file": "install.sh",
-      "aliases": ["install"],
-      "isInstallScript": true,
-      "isRecursive": true,
-      "dependencies": ["core-version"]
-    }
-  ]
+    "module": "nodejs-support",
+    "dependencies": [],
+    "version": "1.0",
+    "isSingleton": true,
+    "scripts": [
+        {
+            "file": "install.sh",
+            "aliases": ["install"],
+            "isInstallScript": true,
+            "isRecursive": true
+        }
+    ]
 }
+

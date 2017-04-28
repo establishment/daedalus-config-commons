@@ -1,6 +1,7 @@
 {
     "module": "daedalus-updater",
     "version": "1.0",
+    "isSingleton": true,
     "scripts": [
         {
             "file": "install.sh",
