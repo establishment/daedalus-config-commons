@@ -7,7 +7,8 @@
       "file": "install.sh",
       "aliases": ["install"],
       "isInstallScript": true,
-      "params": ["hostname", "git-username", "git-email"]
+      "params": ["hostname", "git-username", "git-email", "git-url",
+                 "ulimit-hard:1048576", "ulimit-soft:1048576", "ulimit-systemd:262144"]
     },
     {
       "file": "purge.sh",
