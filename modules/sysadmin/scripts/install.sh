@@ -11,7 +11,7 @@ daedalus apt install dstat
 daedalus apt install sysstat
 
 # Disk information
-daedalus apt insatll discus
+daedalus apt install discus
 
 # I/O Monitoring
 daedalus apt install iotop
@@ -23,5 +23,5 @@ daedalus apt install iptraf
 daedalus apt install bmon
 
 daedalus apt install acct
-daedalus apt isntall whowatch
+daedalus apt install whowatch
 
