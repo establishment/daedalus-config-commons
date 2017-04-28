@@ -22,7 +22,7 @@ daedalus template set UWSGI_THREADS "${UWSGI_THREADS}"
 daedalus template set UWSGI_BUFFER_SIZE "${UWSGI_BUFFER_SIZE}"
 daedalus template set UWSGI_SOCKET_QUEUE_SIZE "${UWSGI_SOCKET_QUEUE_SIZE}"
 
-daedalus template render-to "${DAEDALUS_CONFIG_MODULE_PATH}/website.conf" "${DAEDALUS_FULL_STATE_MODULE_PATH}/${DOMAIN}"
+daedalus template render-to "${DAEDALUS_CONFIG_MODULE_PATH}/res/website.conf" "${DAEDALUS_FULL_STATE_MODULE_PATH}/${DOMAIN}"
 daedalus template render-to "${DAEDALUS_CONFIG_MODULE_PATH}/res/uwsgi.ini" "${DAEDALUS_FULL_STATE_MODULE_PATH}/uwsgi.ini"
 
 daedalus template render-to "${DAEDALUS_CONFIG_MODULE_PATH}/res/uwsgi_params" "${DAEDALUS_FULL_STATE_MODULE_PATH}/uwsgi_params"
