@@ -15,20 +15,20 @@
     {
       "file": "start.sh",
       "aliases": ["start"],
-      "dependencies": ["redis-version"],
+      "dependencies": ["<this>"],
       "priority": "first"
     },
     {
       "file": "stop.sh",
       "aliases": ["stop"],
-      "dependencies": ["redis-version"],
+      "dependencies": ["<this>"],
       "priority": "last"
     },
     {
       "file": "update.sh",
       "aliases": ["install"],
       "isRecursive": true,
-      "dependencies": ["redis-version"],
+      "dependencies": ["<this>"],
       "priority": "first"
     }
   ]

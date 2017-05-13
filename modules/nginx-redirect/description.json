@@ -7,13 +7,14 @@
             "file": "install.sh",
             "aliases": ["install"],
             "isInstallScript": true,
-            "params": ["domain", "port:80"]
+            "params": ["domain", "port:80"],
+            "dependencies": ["nginx-redirect"]
         },
         {
             "file": "purge.sh",
             "aliases": ["purge", "uninstall"],
             "params": ["port", "domain"],
-            "dependencies": ["nginx-website-version"]
+            "dependencies": ["<this>"]
         }
     ]
 }

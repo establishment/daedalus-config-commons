@@ -15,7 +15,7 @@
       "file": "update.sh",
       "aliases": ["update"],
       "isRecursive": true,
-      "dependencies": ["nginx-version"]
+      "dependencies": ["<this>"]
     }
   ]
 }

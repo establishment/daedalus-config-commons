@@ -13,13 +13,13 @@
     {
       "file": "purge.sh",
       "aliases": ["purge", "uninstall"],
-      "dependencies": ["core-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "update.sh",
       "aliases": ["update"],
       "params": ["branch"],
-      "dependencies": ["core-version"]
+      "dependencies": ["<this>"]
     }
   ]
 }

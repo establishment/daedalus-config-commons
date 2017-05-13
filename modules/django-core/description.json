@@ -14,12 +14,12 @@
       "file": "update.sh",
       "aliases": ["update"],
       "isRecursive": true,
-      "dependencies": ["django-core-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "purge.sh",
       "aliases": ["purge", "uninstall"],
-      "dependencies": ["django-core-version"]
+      "dependencies": ["<this>"]
     }
   ]
 }

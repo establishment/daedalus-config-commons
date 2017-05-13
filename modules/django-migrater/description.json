@@ -15,12 +15,12 @@
       "file": "update.sh",
       "aliases": ["update"],
       "isRecursive": true,
-      "dependencies": ["django-migrater-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "migrate.sh",
       "aliases": ["migrate"],
-      "dependencies": ["django-migrater-version"]
+      "dependencies": ["<this>"]
     }
   ]
 }

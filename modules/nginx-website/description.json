@@ -16,23 +16,23 @@
       "file": "purge.sh",
       "aliases": ["purge, uninstall"],
       "params": ["domain"],
-      "dependencies": ["nginx-website-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "update.sh",
       "aliases": ["update"],
       "isRecursive": true,
-      "dependencies": ["nginx-website-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "start.sh",
       "aliases": ["start"],
-      "dependencies": ["nginx-website-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "stop.sh",
       "aliases": ["stop"],
-      "dependencies": ["nginx-website-version"]
+      "dependencies": ["<this>"]
     }
   ]
 }

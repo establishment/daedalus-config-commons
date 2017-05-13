@@ -11,7 +11,7 @@
         {
             "file": "update.sh",
             "aliases": ["update"],
-            "dependencies": ["daedalus-updater-version"]
+            "dependencies": ["<this>"]
         }
     ]
 }

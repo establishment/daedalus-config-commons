@@ -16,30 +16,30 @@
       "file": "update.sh",
       "aliases": ["update"],
       "isRecursive": true,
-      "dependencies": ["postgres-version"],
+      "dependencies": ["<this>"],
       "priority": "first"
     },
     {
       "file": "start.sh",
       "aliases": ["start"],
-      "dependencies": ["postgres-version"],
+      "dependencies": ["<this>"],
       "priority": "first"
     },
     {
       "file": "stop.sh",
       "aliases": ["stop"],
-      "dependencies": ["postgres-version"],
+      "dependencies": ["<this>"],
       "priority": "last"
     },
     {
       "file": "load_db.sh",
       "aliases": ["load-db", "loaddb", "db-load", "dbload", "load"],
-      "dependencies": ["postgres-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "save_db.sh",
       "aliases": ["save-db", "savedb", "db-save", "dbsave", "save"],
-      "dependencies": ["postgres-version"]
+      "dependencies": ["<this>"]
     }
   ]
 }

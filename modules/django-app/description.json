@@ -18,13 +18,13 @@
       "file": "update.sh",
       "aliases": ["update"],
       "isRecursive": true,
-      "dependencies": ["django-app-version"]
+      "dependencies": ["<this>"]
     },
     {
       "file": "purge.sh",
       "aliases": ["purge", "uninstall"],
       "params": ["django-app"],
-      "dependencies": ["django-app-version"]
+      "dependencies": ["<this>"]
     }
   ]
 }
