@@ -33,7 +33,7 @@ ENABLE_LIVE_WEBSOCKETS=${23}
 # Configure local_settings.py
 daedalus template clear
 daedalus template set DOMAIN ${DOMAIN}
-daedalus tempalte set DJANGO_APP_DATABASE_NAME ${DJANGO_APP_DATABASE_NAME}
+daedalus template set DJANGO_APP_DATABASE_NAME ${DJANGO_APP_DATABASE_NAME}
 daedalus template set POSTGRES_PASSWORD ${POSTGRES_PASSWORD}
 daedalus template set LINODE_API_KEY ${LINODE_API_TOKEN}
 daedalus template set EMAIL_SERVER_EMAIL "${EMAIL_SERVER_EMAIL}"
@@ -44,7 +44,7 @@ daedalus template set EMAIL_HOST_USER "${EMAIL_HOST_USER}"
 daedalus template set EMAIL_HOST_PASSWORD "${EMAIL_HOST_PASSWORD}"
 daedalus template set EMAIL_DEFAULT_FROM_EMAIL "${EMAIL_DEFAULT_FROM_EMAIL}"
 daedalus template set RECAPTCHA_PRIVATE_KEY "${RECAPTCHA_PRIVATE_KEY}"
-daedalus templaet set MOCK_MACHINE_ID "${MOCK_MACHINE_ID}"
+daedalus template set MOCK_MACHINE_ID "${MOCK_MACHINE_ID}"
 daedalus template set ACCOUNTS_EMAIL_HOST "${ACCOUNTS_EMAIL_HOST}"
 daedalus template set ACCOUNTS_EMAIL_PORT "${ACCOUNTS_EMAIL_PORT}"
 daedalus template set ACCOUNTS_EMAIL_USER "${ACCOUNTS_EMAIL_USER}"

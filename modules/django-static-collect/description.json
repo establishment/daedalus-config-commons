@@ -1,0 +1,26 @@
+{
+  "module": "django-static-collect",
+  "dependencies": ["django-core"],
+  "version": "1.0",
+  "isSingleton": true,
+  "scripts": [
+    {
+      "file": "install.sh",
+      "aliases": ["install"],
+      "isInstallScript": true,
+      "isRecursive": true,
+      "dependencies": ["django-static-collect-version"]
+    },
+    {
+      "file": "update.sh",
+      "aliases": ["update"],
+      "isRecursive": true,
+      "dependencies": ["<this>"]
+    },
+    {
+      "file": "regenerate.sh",
+      "aliases": ["regen", "regenerate"],
+      "dependencies": ["<this>"]
+    }
+  ]
+}
